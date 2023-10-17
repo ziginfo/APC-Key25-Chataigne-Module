@@ -1,6 +1,6 @@
 # Akai APC-Key-25 Chataigne-Module
 
-this module controls the Akai APC-Key-25 via MIDI
+this module controls the Akai APC-Key25 via MIDI
 in the Values-Section you'll find the Pads and the Knobs and the Keys
 you can set the colors for each Pad
 the Keys are playable on +/- 4 octaves; Middel-C is Key-12 with the Octave-Shift set to 0
