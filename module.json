@@ -1,0 +1,195 @@
+{
+   "name":"APC Key 25",
+   "type":"MIDI",
+   "path":"Hardware",
+   "version":"1.0.0",
+   "description":"MIDI Module for the Akai APC KEY25 MIDI Controller",
+   "url":"",
+   "downloadURL":"",
+   "hasInput":true,
+   "hasOutput":true,
+   "hideDefaultCommands":true,
+
+   "parameters":{
+   },
+   "defaults":{
+      "devices":[
+         ["APC Key 25[0]", "APC Key 25[1]"]
+      ],
+      "autoAdd":false
+   },
+   "hideDefaultParameters":[
+      "autoFeedback",
+       "useHierarchy"
+   ],
+   "scripts":[
+      "key25.js"
+   ],
+   "values":{
+      "Pads":{
+         "type":"Container",
+         "collapsed":true,
+            "Pad 0":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 1":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 2":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 3":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 4":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 5":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 6":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 7":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 8":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 9":   { "type":"Boolean", "min":0,"max":1},
+            "Pad 10":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 11":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 12":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 13":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 14":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 15":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 16":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 17":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 18":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 19":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 20":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 21":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 22":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 23":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 24":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 25":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 26":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 27":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 28":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 29":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 30":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 31":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 32":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 33":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 34":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 35":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 36":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 37":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 38":  { "type":"Boolean", "min":0,"max":1},
+            "Pad 39":  { "type":"Boolean", "min":0,"max":1}
+            
+      },
+            "Knobs":{
+            "type":"Container",
+            "collapsed":true,
+            "Knob 1":{"type":"Float","min":0,"max":127},
+            "Knob 2":{"type":"Float","min":0,"max":127},
+            "Knob 3":{"type":"Float","min":0,"max":127},
+            "Knob 4":{"type":"Float","min":0,"max":127},
+            "Knob 5":{"type":"Float","min":0,"max":127},
+            "Knob 6":{"type":"Float","min":0,"max":127},
+            "Knob 7":{"type":"Float","min":0,"max":127},
+            "Knob 8":{"type":"Float","min":0,"max":127}
+      },
+            "Pad Colors":{
+         "type":"Container",
+         "collapsed":true,
+         "Pad 0":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 1":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 2":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 3":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 4":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 5":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 6":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 7":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 8":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 9":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 10":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 11":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 12":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 13":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 14":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 15":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 16":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 17":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 18":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 19":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 20":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 21":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 22":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 23":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 24":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 25":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 26":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 27":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 28":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 29":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 30":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 31":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 32":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 33":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 34":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 35":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 36":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 37":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 38":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         "Pad 39":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
+         
+   },
+	
+	"Keys":{
+         "type":"Container",
+         "collapsed":true,
+            "Key 0":  { "type":"Integer", "min":0,"max":127},
+            "Key 1":   { "type":"Integer", "min":0,"max":127},
+            "Key 2":   { "type":"Integer", "min":0,"max":127},
+            "Key 3":   { "type":"Integer", "min":0,"max":127},
+            "Key 4":   { "type":"Integer", "min":0,"max":127},
+            "Key 5":   { "type":"Integer", "min":0,"max":127},
+            "Key 6":   { "type":"Integer", "min":0,"max":127},
+            "Key 7":   { "type":"Integer", "min":0,"max":127},
+            "Key 8":   { "type":"Integer", "min":0,"max":127},
+            "Key 9":   { "type":"Integer", "min":0,"max":127},
+            "Key 10":  { "type":"Integer", "min":0,"max":127},
+            "Key 11":  { "type":"Integer", "min":0,"max":127},
+            "Key 12":  { "type":"Integer", "min":0,"max":127},
+            "Key 13":  { "type":"Integer", "min":0,"max":127},
+            "Key 14":  { "type":"Integer", "min":0,"max":127},
+            "Key 15":  { "type":"Integer", "min":0,"max":127},
+            "Key 16":  { "type":"Integer", "min":0,"max":127},
+            "Key 17":  { "type":"Integer", "min":0,"max":127},
+            "Key 18":  { "type":"Integer", "min":0,"max":127},
+            "Key 19":  { "type":"Integer", "min":0,"max":127},
+            "Key 20":  { "type":"Integer", "min":0,"max":127},
+            "Key 21":  { "type":"Integer", "min":0,"max":127},
+            "Key 22":  { "type":"Integer", "min":0,"max":127},
+            "Key 23":  { "type":"Integer", "min":0,"max":127},
+            "Key 24":  { "type":"Integer", "min":0,"max":127}
+            
+      }
+
+
+   },
+   "commands":{
+      "Set Pad Color":{
+         "menu":"",
+         "callback":"setPadColor",
+         "parameters":{
+            "Pad":{
+               "type":"Integer",
+               "min":0,
+               "max":39,
+               "default":0
+            },
+            "Color":{
+               "type":"Enum",
+               "options":{
+                  "Black":[0],
+                  "Green":[1],
+                  "Green_Blink":[2],
+                  "Red":[3],
+                  "Red_Blink":[4],
+                  "Yellow":[5],
+                  "Yellow_Blink":[6],
+               }
+            }
+         }
+      },
+      "Reset Pad Colors":{
+         "menu":"",
+         "callback":"resetColors"
+      }
+   }
+}
