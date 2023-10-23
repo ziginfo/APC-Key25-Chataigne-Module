@@ -48,6 +48,42 @@ function setPadColor(pad, colors)
 		local.values.padColors.getChild("pad"+i).set("Yellow_Blink");
 	}
 }
+
+function setRowPadColor(row, pad, colors)
+{
+	//setLed(pad, color[0]);
+	i = (row*8)+pad-1;
+	//script.log("a: "+i+"/"+colors[0]);
+	x = colors[0];
+	if (x == 0)
+	{
+		local.values.padColors.getChild("pad"+i).set("Black");
+	}
+	else if (x == 1)
+	{
+		local.values.padColors.getChild("pad"+i).set("Green");
+	}
+	else if (x == 2)
+	{
+		local.values.padColors.getChild("pad"+i).set("Green_Blink");
+	}
+	else if (x == 3)
+	{
+		local.values.padColors.getChild("pad"+i).set("Red");	
+	}
+	else if (x == 4)
+	{
+		local.values.padColors.getChild("pad"+i).set("Red_Blink");
+	}
+	else if (x == 5)
+	{
+		local.values.padColors.getChild("pad"+i).set("Yellow");
+	}
+	else if (x == 6)
+	{
+		local.values.padColors.getChild("pad"+i).set("Yellow_Blink");
+	}
+}
 	
 
 

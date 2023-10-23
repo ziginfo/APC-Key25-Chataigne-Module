@@ -2,7 +2,7 @@
    "name":"APC Key 25",
    "type":"MIDI",
    "path":"Hardware",
-   "version":"1.0.0",
+   "version":"1.1",
    "description":"MIDI Module for the Akai APC KEY25 MIDI Controller",
    "url":"https://github.com/ziginfo/APC-Key25-Chataigne-Module",
    "downloadURL":"https://github.com/ziginfo/APC-Key25-Chataigne-Module/archive/refs/heads/main.zip",
@@ -14,7 +14,7 @@
    },
    "defaults":{
       "devices":[
-         ["APC Key 25[0]", "APC Key 25[1]"]
+         ["", ""]
       ],
       "autoAdd":false
    },
@@ -163,7 +163,9 @@
 
    },
    "commands":{
-      "Set Pad Color":{
+   
+   
+      "Set Pad Color(number)":{
          "menu":"",
          "callback":"setPadColor",
          "parameters":{
@@ -182,14 +184,44 @@
                   "Red":[3],
                   "Red_Blink":[4],
                   "Yellow":[5],
-                  "Yellow_Blink":[6],
-               }
-            }
-         }
-      },
+                  "Yellow_Blink":[6],  }  }
+         }  },
+         
+        "Set Pad Color(row/pad)":{
+         "menu":"",
+         "callback":"setRowPadColor",
+         "parameters":{
+         
+            "Row (from up to down)":{
+                "type":"Enum",
+               "options":{
+                  "First up":4,
+                  "Second":3,
+                  "Third":2,
+                  "Fourth":1,
+                  "Last Down":0  }},
+               
+            "Pad Number (1-8)":{
+               "type":"Integer",
+               "min":1,
+               "max":8,
+               "default":0 },
+               
+            "Color":{
+               "type":"Enum",
+               "options":{
+                  "Black":[0],
+                  "Green":[1],
+                  "Green_Blink":[2],
+                  "Red":[3],
+                  "Red_Blink":[4],
+                  "Yellow":[5],
+                  "Yellow_Blink":[6]  }  }
+         }  },
+         
+         
       "Reset Pad Colors":{
          "menu":"",
-         "callback":"resetColors"
-      }
+         "callback":"resetColors"  }
    }
 }
