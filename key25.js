@@ -16,7 +16,7 @@ function setLed(pad, color)
 function setPadColor(pad, colors)
 {
 	//setLed(pad, color[0]);
-	i = parseInt(pad)+1;
+	i = parseInt(pad);
 	//script.log("a: "+i+"/"+colors[0]);
 	x = colors[0];
 	if (x == 0)
