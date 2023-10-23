@@ -13,9 +13,7 @@
    "parameters":{
    },
    "defaults":{
-      "devices":[
-         ["", ""]
-      ],
+      "devices":["", ""],
       "autoAdd":false
    },
    "hideDefaultParameters":[
