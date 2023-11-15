@@ -72,7 +72,7 @@ function setFuncPadColVert(butt, color) {
 function resetPadColors()
 {
 	for(var i=0;i<=39;i++) 
-		{local.sendNoteOn(1, i, 0);}
+		{setPadColor(i, 0);}
 }
 
 function resetButtonColors()
