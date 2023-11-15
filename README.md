@@ -7,7 +7,7 @@ you can set the colors for each Pad and also for the Function-Buttons (please no
 the Keys are playable on +/- 4 octaves; Middel-C is Key-12 with the Octave-Shift set to 0   
 if you change the Octave on the keyboard you have to set the same Octave-Shift in the Chataigne-Module   
 
-###updated to new Version 1.3  
+### updated to new Version 1.3  
 and added some more features
 Please note that you can display the "Default Actions" which are currently hidden, by editing the "module.json"-file...  
 Open it in a Text-Editer, go to Line where you will see :  "hideDefaultCommands":true, and change "true" to "false" and you're done !    
