@@ -2,7 +2,7 @@
    "name":"APC Key 25",
    "type":"MIDI",
    "path":"MIDI Control",
-   "version":"1.1",
+   "version":"1.4",
    "description":"MIDI Module for the Akai APC KEY25 MIDI Controller",
    "url":"https://github.com/ziginfo/APC-Key25-Chataigne-Module",
    "downloadURL":"https://github.com/ziginfo/APC-Key25-Chataigne-Module/archive/refs/heads/main.zip",
@@ -66,8 +66,7 @@
             "Pad 36":  { "type":"Boolean", "min":0,"max":1},
             "Pad 37":  { "type":"Boolean", "min":0,"max":1},
             "Pad 38":  { "type":"Boolean", "min":0,"max":1},
-            "Pad 39":  { "type":"Boolean", "min":0,"max":1}
-            
+            "Pad 39":  { "type":"Boolean", "min":0,"max":1}            
       },
             "Knobs":{
             "type":"Container",
@@ -81,7 +80,7 @@
             "Knob 7":{"type":"Float","min":0,"max":127},
             "Knob 8":{"type":"Float","min":0,"max":127}
       },
-            "Pad Colors":{
+    "Pad Colors":{
          "type":"Container",
          "collapsed":true,
          "Pad 0":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
@@ -123,8 +122,26 @@
          "Pad 36":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
          "Pad 37":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
          "Pad 38":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}},
-         "Pad 39":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}}
-         
+         "Pad 39":{"type":"Enum","options":{"Black":[0],"Green":[1],"Green_Blink":[2],"Red":[3],"Red_Blink":[4],"Yellow":[5],"Yellow_Blink":[6]}}         
+   },
+   
+     "Button Colors":{
+         "type":"Container",
+         "collapsed":true,
+         "Butt 64":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "Butt 65":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "Butt 66":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "Butt 67":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "Butt 68":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "Butt 69":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "Butt 70":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "Butt 71":{"type":"Enum","options":{"Black":[0],"Red":[1]}},
+         "----":{"type":"Enum","options":{"--":[0]}},
+         "Butt 82":{"type":"Enum","options":{"Black":[0],"Green":[1]}},
+         "Butt 83":{"type":"Enum","options":{"Black":[0],"Green":[1]}},
+         "Butt 84":{"type":"Enum","options":{"Black":[0],"Green":[1]}},
+         "Butt 85":{"type":"Enum","options":{"Black":[0],"Green":[1]}},
+         "Butt 86":{"type":"Enum","options":{"Black":[0],"Green":[1]}}        
    },
 	
 	"Keys":{
@@ -154,8 +171,7 @@
             "Key 21":  { "type":"Integer", "min":0,"max":127},
             "Key 22":  { "type":"Integer", "min":0,"max":127},
             "Key 23":  { "type":"Integer", "min":0,"max":127},
-            "Key 24":  { "type":"Integer", "min":0,"max":127}
-            
+            "Key 24":  { "type":"Integer", "min":0,"max":127}            
       }
 
 
@@ -164,15 +180,16 @@
    
    
       "Set Pad Color(number)":{
-         "menu":"",
+         "menu":"Color Pads",
          "callback":"setPadColor",
+         
          "parameters":{
             "Pad":{
                "type":"Integer",
                "min":0,
                "max":39,
-               "default":0
-            },
+               "default":0  },
+               
             "Color":{
                "type":"Enum",
                "options":{
@@ -185,8 +202,8 @@
                   "Yellow_Blink":[6] }  }
          }  },
          
-        "Set Pad Color(row/pad)":{
-         "menu":"",
+     "Set Pad Color(row/pad)":{
+         "menu":"Color Pads",
          "callback":"setRowPadColor",
          "parameters":{
          
@@ -217,9 +234,62 @@
                   "Yellow_Blink":[6]  }  }
          }  },
          
+     "SetColor HorizFuncButton":{
+         "menu":"Color Pads",
+         "callback":"setFuncPadColHor",
+         "parameters":{
+         
+            "Button (horizontal line)":{
+                "type":"Enum",
+               "options":{
+                  "Up":64,
+                  "Down":65,
+                  "Left":66,
+                  "Right":67,
+                  "Vol":68,
+                  "Pan":69,
+                  "Send":70,
+                  "Device":71  }},
+               
+            "Color":{
+               "type":"Enum",
+               "options":{
+                  "Black":0,
+                  "Red":127  }  }
+         }  },
+         
+    "SetColor VertFuncButton":{
+         "menu":"Color Pads",
+         "callback":"setFuncPadColVert",
+         "parameters":{
+         
+            "Button (vertical line)":{
+                "type":"Enum",
+               "options":{
+                  "ClipStop":82,
+                  "Solo":83,
+                  "RecArm":84,
+                  "Mute":85,
+                  "Select":86}},
+               
+            "Color":{
+               "type":"Enum",
+               "options":{
+                  "Black":0,
+                  "Green":127  }  }
+         }  },
+         
          
       "Reset Pad Colors":{
-         "menu":"",
-         "callback":"resetColors"  }
+         "menu":"Color Pads",
+         "callback":"resetPadColors"  },
+         
+      "Reset Button Colors":{
+         "menu":"Color Pads",
+         "callback":"resetButtonColors"  },
+         
+      "Reset All Colors":{
+         "menu":"Color Pads",
+         "callback":"resetAllColors"  }
    }
 }

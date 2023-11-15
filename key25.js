@@ -15,88 +15,73 @@ function setLed(pad, color)
 
 function setPadColor(pad, colors)
 {
-	//setLed(pad, color[0]);
 	i = parseInt(pad);
-	//script.log("a: "+i+"/"+colors[0]);
 	x = colors[0];
 	if (x == 0)
-	{
-		local.values.padColors.getChild("pad"+i).set("Black");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Black"); }
 	else if (x == 1)
-	{
-		local.values.padColors.getChild("pad"+i).set("Green");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Green"); }
 	else if (x == 2)
-	{
-		local.values.padColors.getChild("pad"+i).set("Green_Blink");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Green_Blink"); }
 	else if (x == 3)
-	{
-		local.values.padColors.getChild("pad"+i).set("Red");	
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Red"); }
 	else if (x == 4)
-	{
-		local.values.padColors.getChild("pad"+i).set("Red_Blink");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Red_Blink"); }
 	else if (x == 5)
-	{
-		local.values.padColors.getChild("pad"+i).set("Yellow");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Yellow"); }
 	else if (x == 6)
-	{
-		local.values.padColors.getChild("pad"+i).set("Yellow_Blink");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Yellow_Blink"); }
 }
 
 function setRowPadColor(row, pad, colors)
 {
-	//setLed(pad, color[0]);
 	i = (row*8)+pad-1;
-	//script.log("a: "+i+"/"+colors[0]);
 	x = colors[0];
 	if (x == 0)
-	{
-		local.values.padColors.getChild("pad"+i).set("Black");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Black"); }
 	else if (x == 1)
-	{
-		local.values.padColors.getChild("pad"+i).set("Green");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Green"); }
 	else if (x == 2)
-	{
-		local.values.padColors.getChild("pad"+i).set("Green_Blink");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Green_Blink"); }
 	else if (x == 3)
-	{
-		local.values.padColors.getChild("pad"+i).set("Red");	
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Red"); }
 	else if (x == 4)
-	{
-		local.values.padColors.getChild("pad"+i).set("Red_Blink");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Red_Blink"); }
 	else if (x == 5)
-	{
-		local.values.padColors.getChild("pad"+i).set("Yellow");
-	}
+	{ local.values.padColors.getChild("pad"+i).set("Yellow"); }
 	else if (x == 6)
-	{
-		local.values.padColors.getChild("pad"+i).set("Yellow_Blink");
+	{ local.values.padColors.getChild("pad"+i).set("Yellow_Blink");
 	}
+}
+
+function setFuncPadColHor(butt, color) {
+	local.sendNoteOn(1, butt, color);
 }
 	
-
-
-function resetColors()
-{
-	for(var i=0;i<39;i++) 
-		{
-			setPadColor(i, 0);
-		}
-
+function setFuncPadColVert(butt, color) {
+	local.sendNoteOn(1, butt, color);
 }
 
-//Events
+function resetPadColors()
+{
+	for(var i=0;i<=39;i++) 
+		{local.sendNoteOn(1, i, 0);}
+}
+
+function resetButtonColors()
+{
+	for(var n=64;n<=86;n++) 
+		{local.sendNoteOn(1, n, 0);}
+}
+
+function resetAllColors()
+{
+	for(var n=0;n<=86;n++) 
+		{local.sendNoteOn(1, n, 0);}
+}
+
+// Events
+// Feedback
 
 function moduleParameterChanged(param)
 {
@@ -106,14 +91,19 @@ function moduleParameterChanged(param)
 function moduleValueChanged(value) {
   script.log(value.name + " value changed, new value: " + value.get());
   	if(value.getParent().name == "padColors")
-	{
-		var id = parseInt(value.name.substring(3, 5));
+	{	var id = parseInt(value.name.substring(3, 5));
 		var val = value.get();
 		script.log("Test: "+value.name.substring(3, 5)+"/"+val[0]+"/"+val[1]);
 		//setLed(value.name.substring(3, 5), val[0]);
-		local.sendNoteOn(1, value.name.substring(3, 5), val[0]);
+		local.sendNoteOn(1, value.name.substring(3, 5), val[0]); }
+		
+	else if(value.getParent().name == "buttonColors")
+	{	var id = parseInt(value.name.substring(4, 6));
+		var val = value.get();
+		script.log("Test: "+value.name.substring(4, 6)+"/"+val[0]+"/"+val[1]);
+		//setLed(value.name.substring(3, 5), val[0]);
+		local.sendNoteOn(1, value.name.substring(4, 6), val[0]); }
 
-	}
 }
 
 function noteOnEvent(channel, pitch, velocity)
@@ -153,4 +143,4 @@ function sysExEvent(data)
 }
 
 
-resetColors();
+resetPadColors();
