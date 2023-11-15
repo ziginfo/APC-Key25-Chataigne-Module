@@ -3,7 +3,14 @@
 var octave;
 //Functions
 
-
+function init() {
+	cont=local.values.infos;
+	cont.setCollapsed(true);
+	cont=local.values.tempo;
+	cont.setCollapsed(true);
+	cont=local.values.mtc;
+	cont.setCollapsed(true);
+}
 
 function setLed(pad, color)
 {
